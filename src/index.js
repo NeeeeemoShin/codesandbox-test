@@ -109,6 +109,18 @@
 /**
  * デフォルト値、引数など
  */
-const sayHello = (name = "ゲスト") => console.log(`こんにちは！${name}さん！`);
-//↑初期値の設定
-sayHello("じゃけえ");
+// const sayHello = (name = "ゲスト") => console.log(`こんにちは！${name}さん！`);
+// //↑初期値の設定
+// sayHello("じゃけえ");
+
+/**
+ * スプレッド構文
+ */
+// 配列の展開
+const arr1 = [1, 2];
+// console.log(arr1);//配列としてログされる
+// console.log(...arr1);//配列の中身を展開する
+
+const sumFunc = (num1, num2) => console.log(num1 + num2);
+sumFunc(arr1[0], arr1[1]);
+sumFunc(...arr1); //3が出力される、forEach的な？
