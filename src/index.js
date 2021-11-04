@@ -100,8 +100,15 @@
 // const message2 = `名前は${name}です。年齢は${age}歳です。`;
 // console.log(message2);
 
-const myProfile = ["じゃけぇ", 28];
-const [name, age] = myProfile;
+// const myProfile = ["じゃけぇ", 28];
+// const [name, age] = myProfile;
 
-const message3 = `名前は${name}です。年齢は${age}歳です`;
-console.log(message3);
+// const message3 = `名前は${name}です。年齢は${age}歳です`;
+// console.log(message3);
+
+/**
+ * デフォルト値、引数など
+ */
+const sayHello = (name = "ゲスト") => console.log(`こんにちは！${name}さん！`);
+//↑初期値の設定
+sayHello("じゃけえ");
