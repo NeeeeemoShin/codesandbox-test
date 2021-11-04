@@ -126,9 +126,28 @@
 // sumFunc(...arr1); //3が出力される、forEach的な？
 
 // まとめる
-const arr2 = [1, 2, 3, 4, 5];
-const [num1, num2, ...arr3] = arr2;
-console.log(num1);
-console.log(num2);
-console.log(...arr3);
-//arr2の3, 4, 5がまとめてarr3に代入されている
+// const arr2 = [1, 2, 3, 4, 5];
+// const [num1, num2, ...arr3] = arr2;
+// console.log(num1);
+// console.log(num2);
+// console.log(...arr3);
+// //arr2の3, 4, 5がまとめてarr3に代入されている
+
+// 配列のコピー、結合
+const arr4 = [10, 20];
+const arr5 = [30, 40];
+
+const arr6 = [...arr4];
+console.log(arr6); // arr4のと同じ内容が出力される/コピー
+
+const arr7 = [...arr4, ...arr5];
+console.log(arr7); // arr4とarr5を結合した
+
+const arr8 = arr4;
+console.log(arr8);
+arr8[0] = 100;
+console.log(arr4);
+//コピーのやり方が上記だと、参照元ををコピーしているので、
+//arr8に変更を加えた時、arr4の中身も変る
+//スプレッド構文でのコピーは参照元のコピーではなく、
+//中身、要素のコピーなので元の配列の中身は変更されない
