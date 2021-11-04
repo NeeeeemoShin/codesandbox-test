@@ -198,6 +198,13 @@ const nameArr = ["田中", "山田", "じゃけえ"];
  * 三項演算子
  */
 //ある条件 ? 条件がtrueの時 : 条件がfalseの時
-const val1 = 1 < 0 ? "trueです" : "falseです";
-console.log(val1);
+// const val1 = 1 < 0 ? "trueです" : "falseです";
+// console.log(val1);
 //if~else を1行で記述できるのが三項演算子
+
+const num = 1300;
+// console.log(num.toLocaleString());//数字を3桁ごとにカンマを入れて表示してくれる関数
+
+const formattedNum =
+  typeof num === "number" ? num.toLocaleString() : "数値を入力してください";
+console.log(formattedNum);
