@@ -159,11 +159,11 @@
 //～番目は～です　としたいとき
 const nameArr = ["田中", "山田", "じゃけえ"];
 //従来の配列の中身を出力する記述
-for (let i = 0; i < nameArr.length; i++) {
-  console.log(`${i + 1}番目は${nameArr[i]}です`);
-}
+// for (let i = 0; i < nameArr.length; i++) {
+//   console.log(`${i + 1}番目は${nameArr[i]}です`);
+// }
 //上記も以下の1文で記述できる、mapの第二引数はindexが入る
-nameArr.map((name, index) => console.log(`${index + 1}番目は${name}です`));
+// nameArr.map((name, index) => console.log(`${index + 1}番目は${name}です`));
 
 //以下がmapの基本的な構文
 // const nameArr2 = nameArr.map((name) => {
@@ -179,3 +179,17 @@ nameArr.map((name, index) => console.log(`${index + 1}番目は${name}です`));
 // });
 
 // console.log(newNumArr);
+
+//nameArrの自分(じゃけえ)以外に"さん"をつけて出力したい
+const newNameArr = nameArr.map((name) => {
+  if (name == "じゃけえ") {
+    return name;
+  } else {
+    return `${name}さん`;
+  }
+});
+
+console.log(newNameArr);
+
+//mapは配列の中身を順番に処理する
+//filterは配列の中身から条件に合致したものを抽出できる
