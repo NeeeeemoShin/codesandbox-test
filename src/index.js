@@ -134,20 +134,36 @@
 // //arr2の3, 4, 5がまとめてarr3に代入されている
 
 // 配列のコピー、結合
-const arr4 = [10, 20];
-const arr5 = [30, 40];
+// const arr4 = [10, 20];
+// const arr5 = [30, 40];
 
-const arr6 = [...arr4];
-console.log(arr6); // arr4のと同じ内容が出力される/コピー
+// const arr6 = [...arr4];
+// console.log(arr6); // arr4のと同じ内容が出力される/コピー
 
-const arr7 = [...arr4, ...arr5];
-console.log(arr7); // arr4とarr5を結合した
+// const arr7 = [...arr4, ...arr5];
+// console.log(arr7); // arr4とarr5を結合した
 
-const arr8 = arr4;
-console.log(arr8);
-arr8[0] = 100;
-console.log(arr4);
+// const arr8 = arr4;
+// console.log(arr8);
+// arr8[0] = 100;
+// console.log(arr4);
 //コピーのやり方が上記だと、参照元ををコピーしているので、
 //arr8に変更を加えた時、arr4の中身も変る
 //スプレッド構文でのコピーは参照元のコピーではなく、
 //中身、要素のコピーなので元の配列の中身は変更されない
+
+/**
+ * mapやfilterを使った配列の処理
+ */
+const nameArr = ["田中", "山田", "じゃけえ"];
+//従来の配列の中身を出力する記述
+// for (let i = 0; i < nameArr.length; i++) {
+//   console.log(nameArr[i]);
+// }
+//以下がmapの基本的な構文
+// const nameArr2 = nameArr.map((name) => {
+//   return name;
+// })
+// console.log(nameArr2);
+//従来の記法がmapを使うことによって以下の1文で済むようになる
+nameArr.map((name) => console.log(name));
