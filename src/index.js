@@ -155,7 +155,7 @@
 /**
  * mapやfilterを使った配列の処理
  */
-const nameArr = ["田中", "山田", "じゃけえ"];
+// const nameArr = ["田中", "山田", "じゃけえ"];
 //従来の配列の中身を出力する記述
 // for (let i = 0; i < nameArr.length; i++) {
 //   console.log(nameArr[i]);
@@ -166,4 +166,12 @@ const nameArr = ["田中", "山田", "じゃけえ"];
 // })
 // console.log(nameArr2);
 //従来の記法がmapを使うことによって以下の1文で済むようになる
-nameArr.map((name) => console.log(name));
+// nameArr.map((name) => console.log(name));
+
+//ある条件になるもの(条件はfilterの中の関数で自分で指定する)を抽出できる
+const numArr = [1, 2, 3, 4, 5];
+const newNumArr = numArr.filter((num) => {
+  return num % 2 === 1;
+});
+
+console.log(newNumArr);
