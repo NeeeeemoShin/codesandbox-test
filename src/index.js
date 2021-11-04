@@ -181,15 +181,23 @@ const nameArr = ["田中", "山田", "じゃけえ"];
 // console.log(newNumArr);
 
 //nameArrの自分(じゃけえ)以外に"さん"をつけて出力したい
-const newNameArr = nameArr.map((name) => {
-  if (name == "じゃけえ") {
-    return name;
-  } else {
-    return `${name}さん`;
-  }
-});
+// const newNameArr = nameArr.map((name) => {
+//   if (name == "じゃけえ") {
+//     return name;
+//   } else {
+//     return `${name}さん`;
+//   }
+// });
 
-console.log(newNameArr);
+// console.log(newNameArr);
 
 //mapは配列の中身を順番に処理する
 //filterは配列の中身から条件に合致したものを抽出できる
+
+/**
+ * 三項演算子
+ */
+//ある条件 ? 条件がtrueの時 : 条件がfalseの時
+const val1 = 1 < 0 ? "trueです" : "falseです";
+console.log(val1);
+//if~else を1行で記述できるのが三項演算子
